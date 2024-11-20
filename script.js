@@ -28,7 +28,7 @@ getNumbers()
         document.getElementById("output").textContent =
           multipliedNumbers.join(", ");
         resolve(multipliedNumbers);
-      }, 2000); // Delay of 2 seconds
+      }, 4000); // Delay of 2 seconds
     });
   })
   .catch((err) => console.error(err));
