@@ -1,3 +1,8 @@
+function getNumbers() {
+  // Returns a promise that resolves with an array of numbers immediately
+  return Promise.resolve([1, 2, 3, 4]);
+}
+
 getNumbers()
   .then((numbers) => {
     // First promise: filter out odd numbers after 3 seconds
