@@ -1,5 +1,3 @@
-//your JS code here. If required.
-
 function getNumbers() {
   // Returns a promise that resolves with an array of numbers
   return new Promise((resolve, reject) => {
@@ -28,7 +26,7 @@ getNumbers()
         document.getElementById("output").textContent =
           multipliedNumbers.join(", ");
         resolve(multipliedNumbers);
-      }, 4000); // Delay of 2 seconds
+      }, 2000); // Delay of 2 seconds
     });
   })
   .catch((err) => console.error(err));
