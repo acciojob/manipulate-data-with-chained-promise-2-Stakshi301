@@ -1,10 +1,6 @@
 function getNumbers() {
   // Returns a promise that resolves with an array of numbers
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve([1, 2, 3, 4]);
-    }, 3000);
-  });
+  return Promise.resolve([1, 2, 3, 4]);
 }
 
 getNumbers()
