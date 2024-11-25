@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function getNumbers() {
     return new Promise((resolve) => {
       setTimeout(() => {
-        console.log("Resolving numbers array");
         resolve([1, 2, 3, 4]);
       }, 3000);
     });
@@ -20,20 +19,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return new Promise((resolve) => {
         setTimeout(() => {
           const evenNumbers = numbers.filter((num) => num % 2 === 0);
-          console.log("Filtered even numbers:", evenNumbers);
-          outputElement.textContent = `${evenNumbers.join(", ")}`;
+          outputElement.textContent = evenNumbers.join(", ");
           resolve(evenNumbers);
-        }, 1000);
+        }, 1000); // First update after 1 second
       });
     })
     .then((evenNumbers) => {
       return new Promise((resolve) => {
         setTimeout(() => {
           const multipliedNumbers = evenNumbers.map((num) => num * 2);
-          console.log("Multiplied numbers:", multipliedNumbers);
-          outputElement.textContent = `${multipliedNumbers.join(", ")}`;
+          outputElement.textContent = multipliedNumbers.join(", ");
           resolve(multipliedNumbers);
-        }, 2000);
+        }, 2000); // Second update after 2 seconds
       });
     })
     .catch((error) => {
